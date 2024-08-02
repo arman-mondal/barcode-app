@@ -6,7 +6,21 @@ function App() {
   const [format,setformat]=useState("CODE128");
   return (
     <div className="App">
-     <Barcode value="240726001" format={format}  />
+      <div>
+      <Barcode value="240726001" format={'CODE39'}   />
+<h1>Code 39</h1>
+      </div>
+      <div>
+      <Barcode value="240726001" format={'CODE128A'}   />
+<h1>Code 128A</h1>
+      </div>
+      <div>
+      <Barcode value="240726001" format={'CODE128B'}   />
+<h1>Code 128B</h1>
+      </div>     <div>
+      <Barcode value="240726001" format={'CODE128C'}   />
+<h1>Code 128C</h1>
+      </div> 
      <h1>{format}</h1>
      <select value={format} onChange={(a)=>setformat(a.target.value)} >
         <option value="CODE128" >CODE128</option>
